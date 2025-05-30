@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'snippets/quotes.dart';
+import 'quotes.dart';
 
 void main() => runApp(MaterialApp(home: QuoteList()));
 
