@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'snippets/quotes.dart';
 import 'snippets/quote_card.dart';
 
+
 void main() => runApp(MaterialApp(home: QuoteList()));
 
 class QuoteList extends StatefulWidget {
@@ -28,9 +29,21 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
+        //children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
+        children:
+            quotes
+                .map(
+                  (quote) => QuoteCard(
+                    quote: quote,
+                    delete: () {
+                      setState(() {
+                        quotes.remove(quote);
+                      });
+                    },
+                  ),
+                )
+                .toList(),
       ),
     );
   }
 }
-
