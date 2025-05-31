@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'snippets/quotes.dart';
-import 'snippets/quote_card.dart';
+import 'quotes.dart';
+import 'quote_card.dart';
 
 void main() => runApp(MaterialApp(home: QuoteList()));
 
